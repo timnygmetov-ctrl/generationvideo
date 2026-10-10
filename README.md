@@ -1,5 +1,7 @@
 Проект Qadam London: генерация видео для Instagram.
 
+Сайт с последним прогоном: https://timnygmetov-ctrl.github.io/generationvideo/
+
 ## Как пользоваться
 
 Напишите в чате Claude в этой папке:
