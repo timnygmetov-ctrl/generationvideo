@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qadam Reels</title>
+<meta name="description" content="Сценарий Reels и промпты 3D-кадров Qadam London">
+<style>
+  :root {
+    --navy: #0E2438;
+    --aqua: #7BE0F2;
+    --bg: #F5F7F9;
+    --card: #FFFFFF;
+    --text: #13212E;
+    --muted: #5B6B79;
+    --line: #DDE4EA;
+    --code-bg: #F0F4F7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0A1A29;
+      --card: #10273B;
+      --text: #E6EEF4;
+      --muted: #9AB0C2;
+      --line: #1F3A52;
+      --code-bg: #0C2133;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  header {
+    background: var(--navy);
+    color: #fff;
+    padding: 28px 16px 24px;
+  }
+  header .wrap { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  header b { font-size: 22px; letter-spacing: .2px; }
+  header span { color: var(--aqua); font-size: 14px; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  main { padding: 24px 16px 64px; }
+  nav { display: flex; gap: 8px; margin-bottom: 20px; }
+  nav button {
+    border: 1px solid var(--line);
+    background: var(--card);
+    color: var(--text);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font: inherit;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  nav button[aria-selected="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+  @media (prefers-color-scheme: dark) {
+    nav button[aria-selected="true"] { background: var(--aqua); color: var(--navy); border-color: var(--aqua); }
+  }
+  .panel[hidden] { display: none; }
+  .doc, .scene {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px;
+  }
+  .doc h1 { font-size: 24px; line-height: 1.25; margin-top: 0; }
+  .doc h2 { font-size: 18px; margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--line); }
+  .doc ul { padding-left: 20px; }
+  .scenes { display: grid; gap: 16px; }
+  .scene h3 { margin: 0 0 4px; font-size: 18px; }
+  .scene .num { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .6px; }
+  .scene p { margin: 6px 0 14px; color: var(--muted); }
+  .block { margin-top: 12px; }
+  .block-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+  .block-head span { font-size: 13px; font-weight: 600; color: var(--muted); }
+  .block pre {
+    margin: 0;
+    background: var(--code-bg);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font: 13.5px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+    max-height: 220px;
+    overflow: auto;
+  }
+  .copy {
+    border: 0;
+    background: var(--aqua);
+    color: var(--navy);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .copy.done { background: var(--navy); color: #fff; }
+  .error { color: #B3261E; }
+  footer { color: var(--muted); font-size: 13px; text-align: center; padding: 0 16px 32px; }
+</style>
+</head>
+<body>
+<header><div class="wrap"><b>Qadam Reels</b><span>сценарий и промпты 3D-кадров</span></div></header>
+<main class="wrap">
+  <nav role="tablist">
+    <button role="tab" aria-selected="true" data-tab="scenes">Промпты сцен</button>
+    <button role="tab" aria-selected="false" data-tab="scenario">Сценарий</button>
+  </nav>
+  <section class="panel" id="scenes"><div class="scenes" id="scene-list">Загружаю…</div></section>
+  <section class="panel" id="scenario" hidden><article class="doc" id="scenario-doc">Загружаю…</article></section>
+</main>
+<footer>Qadam London · шаг за шагом</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script>
+  // Вкладки
+  document.querySelectorAll('nav button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('nav button').forEach(b => b.setAttribute('aria-selected', b === btn));
+      document.querySelectorAll('.panel').forEach(p => p.hidden = p.id !== btn.dataset.tab);
+    });
+  });
+
+  function block(label, text) {
+    const wrap = document.createElement('div');
+    wrap.className = 'block';
+    wrap.innerHTML = '<div class="block-head"><span></span><button class="copy">Скопировать</button></div><pre></pre>';
+    wrap.querySelector('span').textContent = label;
+    wrap.querySelector('pre').textContent = text;
+    const btn = wrap.querySelector('button');
+    btn.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(text); } catch (e) { return; }
+      btn.textContent = 'Скопировано';
+      btn.classList.add('done');
+      setTimeout(() => { btn.textContent = 'Скопировать'; btn.classList.remove('done'); }, 1600);
+    });
+    return wrap;
+  }
+
+  fetch('prompts/prompts.json', { cache: 'no-store' })
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(scenes => {
+      const list = document.getElementById('scene-list');
+      list.textContent = '';
+      scenes.forEach(s => {
+        const card = document.createElement('article');
+        card.className = 'scene';
+        card.innerHTML = '<div class="num"></div><h3></h3><p></p>';
+        card.querySelector('.num').textContent = 'Сцена ' + s.scene + ' · ' + s.aspect_ratio + ' · ' + s.size;
+        card.querySelector('h3').textContent = s.title.replace(/^Сцена \d+ · /, '');
+        card.querySelector('p').textContent = s.shot_ru;
+        card.append(block('Prompt', s.prompt), block('Negative prompt', s.negative_prompt));
+        list.append(card);
+      });
+    })
+    .catch(() => { document.getElementById('scene-list').innerHTML = '<p class="error">Не удалось загрузить промпты.</p>'; });
+
+  fetch('scenario.md', { cache: 'no-store' })
+    .then(r => r.ok ? r.text() : Promise.reject())
+    .then(md => { document.getElementById('scenario-doc').innerHTML = marked.parse(md); })
+    .catch(() => { document.getElementById('scenario-doc').innerHTML = '<p class="error">Не удалось загрузить сценарий.</p>'; });
+</script>
+</body>
+</html>

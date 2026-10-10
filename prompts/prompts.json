@@ -1,6 +1,8 @@
 [
   {
     "scene": 1,
+    "title": "Сцена 1 · Заболела",
+    "shot_ru": "Айгерим на кровати во временном жилье, держится за горло и смотрит в телефон.",
     "prompt": "Stylized 3D animated film still, soft rounded character design, expressive friendly faces, gentle subsurface skin shading, warm cinematic lighting, shallow depth of field, clean uncluttered background, muted warm palette with deep navy and soft aqua accents, high-detail render, vertical 9:16 composition. Medium shot, slightly high angle. Aigerim, a 28-year-old Kazakh woman with warm light-brown skin, almond-shaped dark eyes and straight black hair in a low ponytail, wearing a mustard-yellow knitted cardigan over a white t-shirt, dark blue jeans, white sneakers and small silver earrings, sits on the edge of a narrow bed in a small but tidy rented room, one hand gently touching her throat, the other holding a smartphone, her eyebrows raised in quiet worry and uncertainty. A cup of tea steams on a bedside table, a folded blanket beside her. Behind her, a rain-streaked window shows blurred red-brick terraced houses of a London street. Cool grey daylight from the window mixed with a warm bedside lamp glow, intimate and calm, a sense of loneliness softened by warmth.",
     "negative_prompt": "text, letters, words, captions, subtitles, watermark, logo, brand names, readable signs, flags, national symbols, police, border force uniforms, handcuffs, distorted hands, extra fingers, deformed face, photorealistic, live-action photo, horror, gloomy dark mood, caricature, stereotypical costume, blurry, low quality",
     "aspect_ratio": "9:16",
@@ -8,6 +10,8 @@
   },
   {
     "scene": 2,
+    "title": "Сцена 2 · Регистрация",
+    "shot_ru": "Айгерим у стойки регистрации клиники, администратор протягивает ей анкету.",
     "prompt": "Stylized 3D animated film still, soft rounded character design, expressive friendly faces, gentle subsurface skin shading, warm cinematic lighting, shallow depth of field, clean uncluttered background, muted warm palette with deep navy and soft aqua accents, high-detail render, vertical 9:16 composition. Medium shot, eye-level, over-the-counter view. Aigerim, a 28-year-old Kazakh woman with warm light-brown skin, almond-shaped dark eyes and straight black hair in a low ponytail, wearing a mustard-yellow knitted cardigan over a white t-shirt, dark blue jeans, white sneakers and small silver earrings, stands at the reception desk of a small British GP surgery, reaching out to take a blank paper registration form with a hesitant, hopeful smile. Across the desk a friendly middle-aged receptionist of South Asian heritage in a plain teal uniform hands her the form and a pen, smiling warmly. Clean white walls, potted plant, soft blue-and-white decor without any readable text, a small queue-free waiting area in the background. Bright soft daylight, welcoming and reassuring atmosphere.",
     "negative_prompt": "text, letters, words, captions, subtitles, watermark, logo, brand names, readable signs, flags, national symbols, police, border force uniforms, handcuffs, distorted hands, extra fingers, deformed face, photorealistic, live-action photo, horror, gloomy dark mood, caricature, stereotypical costume, blurry, low quality",
     "aspect_ratio": "9:16",
@@ -15,6 +19,8 @@
   },
   {
     "scene": 3,
+    "title": "Сцена 3 · Переводчик",
+    "shot_ru": "Айгерим в зале ожидания говорит по телефону, на лице облегчение.",
     "prompt": "Stylized 3D animated film still, soft rounded character design, expressive friendly faces, gentle subsurface skin shading, warm cinematic lighting, shallow depth of field, clean uncluttered background, muted warm palette with deep navy and soft aqua accents, high-detail render, vertical 9:16 composition. Close-up, eye-level, shallow focus. Aigerim, a 28-year-old Kazakh woman with warm light-brown skin, almond-shaped dark eyes and straight black hair in a low ponytail, wearing a mustard-yellow knitted cardigan over a white t-shirt, dark blue jeans, white sneakers and small silver earrings, sits on a cushioned chair in a bright clinic waiting room, holding a smartphone to her ear, her shoulders relaxing and a relieved small smile appearing as she listens. Her other hand rests on a paper form on her knee. Blurred background of other patients of different ages sitting calmly, light wooden chairs, a large window with soft daylight, pastel blue walls without signs. Gentle warm rim light on her face, feeling of relief and being understood.",
     "negative_prompt": "text, letters, words, captions, subtitles, watermark, logo, brand names, readable signs, flags, national symbols, police, border force uniforms, handcuffs, distorted hands, extra fingers, deformed face, photorealistic, live-action photo, horror, gloomy dark mood, caricature, stereotypical costume, blurry, low quality",
     "aspect_ratio": "9:16",
@@ -22,6 +28,8 @@
   },
   {
     "scene": 4,
+    "title": "Сцена 4 · На приёме",
+    "shot_ru": "Айгерим у врача, на столе планшет с видеосвязью с переводчицей.",
     "prompt": "Stylized 3D animated film still, soft rounded character design, expressive friendly faces, gentle subsurface skin shading, warm cinematic lighting, shallow depth of field, clean uncluttered background, muted warm palette with deep navy and soft aqua accents, high-detail render, vertical 9:16 composition. Medium two-shot, eye-level, slightly angled. Aigerim, a 28-year-old Kazakh woman with warm light-brown skin, almond-shaped dark eyes and straight black hair in a low ponytail, wearing a mustard-yellow knitted cardigan over a white t-shirt, dark blue jeans, white sneakers and small silver earrings, sits beside a desk in a calm doctor's consultation room, speaking openly and gesturing toward her throat, looking more confident. Opposite her a kind Black British female doctor in her forties with short curly hair, wearing a light blue shirt and a stethoscope around her neck, listens attentively and takes notes. On the desk between them a tablet stands upright showing a video call with a smiling female interpreter, screen content simple and without text. Clean examination bed, small plant, warm afternoon light through blinds, trustful and calm mood.",
     "negative_prompt": "text, letters, words, captions, subtitles, watermark, logo, brand names, readable signs, flags, national symbols, police, border force uniforms, handcuffs, distorted hands, extra fingers, deformed face, photorealistic, live-action photo, horror, gloomy dark mood, caricature, stereotypical costume, blurry, low quality",
     "aspect_ratio": "9:16",
@@ -29,6 +37,8 @@
   },
   {
     "scene": 5,
+    "title": "Сцена 5 · Аптека",
+    "shot_ru": "Айгерим в аптеке получает лекарства и показывает сертификат.",
     "prompt": "Stylized 3D animated film still, soft rounded character design, expressive friendly faces, gentle subsurface skin shading, warm cinematic lighting, shallow depth of field, clean uncluttered background, muted warm palette with deep navy and soft aqua accents, high-detail render, vertical 9:16 composition. Medium shot, low eye-level from behind the pharmacy counter. Aigerim, a 28-year-old Kazakh woman with warm light-brown skin, almond-shaped dark eyes and straight black hair in a low ponytail, wearing a mustard-yellow knitted cardigan over a white t-shirt, dark blue jeans, white sneakers and small silver earrings, stands at a neighbourhood pharmacy counter holding up a plain folded paper certificate without readable text, smiling with gratitude. A friendly young pharmacist with East Asian heritage in a white coat hands her a small white paper bag with medicine. Shelves of colourful neutral medicine boxes without labels or brands softly blurred behind them. Clean bright interior, warm overhead lights, soft aqua accents, cosy and positive atmosphere.",
     "negative_prompt": "text, letters, words, captions, subtitles, watermark, logo, brand names, readable signs, flags, national symbols, police, border force uniforms, handcuffs, distorted hands, extra fingers, deformed face, photorealistic, live-action photo, horror, gloomy dark mood, caricature, stereotypical costume, blurry, low quality",
     "aspect_ratio": "9:16",
@@ -36,6 +46,8 @@
   },
   {
     "scene": 6,
+    "title": "Сцена 6 · Шаг сделан",
+    "shot_ru": "Айгерим выходит на улицу после дождя и улыбается.",
     "prompt": "Stylized 3D animated film still, soft rounded character design, expressive friendly faces, gentle subsurface skin shading, warm cinematic lighting, shallow depth of field, clean uncluttered background, muted warm palette with deep navy and soft aqua accents, high-detail render, vertical 9:16 composition. Wide establishing shot, low angle. Aigerim, a 28-year-old Kazakh woman with warm light-brown skin, almond-shaped dark eyes and straight black hair in a low ponytail, wearing a mustard-yellow knitted cardigan over a white t-shirt, dark blue jeans, white sneakers and small silver earrings, steps out of the glass door of a small red-brick GP surgery onto a wet London pavement, breathing in fresh air, with a calm confident smile and a small paper bag in her hand. The rain has just stopped, puddles reflect a clearing sky with the first golden sunlight breaking through clouds. A classic red double-decker bus passes in the soft-focus distance, terraced houses and autumn trees line the street, no readable signs. Golden hour warm light, hopeful and uplifting mood, sense of a first step taken.",
     "negative_prompt": "text, letters, words, captions, subtitles, watermark, logo, brand names, readable signs, flags, national symbols, police, border force uniforms, handcuffs, distorted hands, extra fingers, deformed face, photorealistic, live-action photo, horror, gloomy dark mood, caricature, stereotypical costume, blurry, low quality",
     "aspect_ratio": "9:16",

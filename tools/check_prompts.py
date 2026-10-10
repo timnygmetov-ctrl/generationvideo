@@ -69,8 +69,12 @@ def main() -> int:
             hit = re.search(pattern, prompt, re.I)
             if hit:
                 errors.append(f"{path.name}: недопустимое в промпте: {hit.group(0)!r}")
+        title = re.search(r"^# (.+)$", md, re.M)
+        shot = re.search(r"^\*\*Что в кадре:\*\*\s*(.+)$", md, re.M)
         out.append({
             "scene": int(path.stem.split("-")[1]),
+            "title": title.group(1).strip() if title else path.stem,
+            "shot_ru": shot.group(1).strip() if shot else "",
             "prompt": prompt,
             "negative_prompt": negative or "",
             "aspect_ratio": "9:16",
